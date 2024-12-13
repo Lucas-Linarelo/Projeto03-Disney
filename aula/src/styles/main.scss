@@ -1,0 +1,120 @@
+@use 'hero';
+@use 'variaveis';
+@use 'shows';
+@use 'plans';
+@use 'available-devices';
+@use 'faq';
+@use 'footer';
+
+
+@font-face{
+    font-family: Avenir;
+    src: url(../../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+@font-face{
+    font-family: Avenir;
+    src: url(../../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Avenir, sans-serif;
+}
+
+//mixins texto
+    @mixin text($fontSize: 16px){
+        font-size: $fontSize;
+        line-height: $fontSize + 10px;
+        color: variaveis.$cor2;
+    }
+    .text--bg{
+        @include text(18px);
+    }
+    .text--md{
+        @include text;
+    }
+    .text--sm{
+        @include text(12px)
+    }
+    .text-link{
+        @include text(18px);
+        color: variaveis.$cor3;
+        text-decoration: underline;
+    }
+//mixins título
+    @mixin title($fontSize: 40px){
+        @include text($fontSize);
+        color: variaveis.$cor3;
+    }
+    .title--bg{
+        @include title(44px);
+    }
+    .title--md{
+        @include title;
+    }
+    .title--sm{
+        @include title(28px)
+    }
+
+
+body{
+    background-color: variaveis.$cor1;
+}
+
+.button{
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$cor3;
+    background-color: variaveis.$cor4;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: none;
+}
+
+.image-text-section{
+    padding: 5.6vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    img{
+        max-width: 100%;
+    }
+
+    &__text_container{
+        padding: 0 2vw;
+        
+        h2{
+            margin-bottom: 24px;
+        }
+    }
+
+    &--image-full-width{
+        display: block;
+        position: relative;
+
+        img{
+            width: 100%;
+        }
+        &__text_container{
+            position: absolute;
+            top: 0vw;
+            left: 50%;
+            height: 100%;
+            width: calc(50% - 5.6vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    }
+}

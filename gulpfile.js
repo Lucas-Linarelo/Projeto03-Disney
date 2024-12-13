@@ -3,13 +3,13 @@ const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 
 function styles(){
-    return gulp.src('./aula/src/styles/*.scss')
+    return gulp.src('./src/styles/*.scss')
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(gulp.dest('./aula/dist/css'));
+    .pipe(gulp.dest('./dist/css'));
 }
 
 function images(){
-    return gulp.src('./aula/src/images/**/*.{jpg,jpeg,png,gif,svg,ico}')
+    return gulp.src('./src/images/**/*.{jpg,jpeg,png,gif,svg,ico}')
     .pipe(imagemin())
     .pipe(gulp.dest('./aula/dist/images'));
 }
@@ -17,5 +17,5 @@ function images(){
 exports.default = gulp.parallel(styles, images);
 
 exports.watch = function(){
-    gulp.watch('./aula/src/styles/*.scss', gulp.parallel(styles))
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
 }

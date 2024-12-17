@@ -1,4 +1,4 @@
-﻿### Projeto Clone Disney+ - EBAC
+﻿### Projeto Clone Disney+ EBAC
 Este projeto foi inspirado na interface da Disney+, desenvolvido com foco em desempenho, acessibilidade e boas práticas de design.
 
 [![Projeto - Clone Disney](https://img.shields.io/badge/Acesso-Project03--Disney+-blue?style=for-the-badge)](https://projeto03-disney.vercel.app/)

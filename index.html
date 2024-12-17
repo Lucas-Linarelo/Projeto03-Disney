@@ -7,11 +7,27 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
-    <section class="hero">
-        <div class="hero__content">
-            <h1 class="hero__content__branding">
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__logo">
                 <img src="./dist/images/disneyplus.svg" alt="Disney+">
             </h1>
+            <ul class="header__links">
+                <li class="header__links__item">
+                    <a href="#" class="button button--secondary">Assine agora</a>
+                </li>
+                <li class="header__links__item">
+                    <a href="#" class="button button--dark">Entrar</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__content">
+            <div class="hero__content__branding">
+                <img src="./dist/images/disneyplus.svg" alt="Disney+">
+            </div>
             <h3 class="title--sm">
                 As melhores história em um só lugar.
             </h3>
@@ -150,7 +166,10 @@
         </div>
     </section>
     <section class="image-text-section image-text-section--image-full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="Rei leão">
+        <picture>
+            <source media="(max-width:768px)" srcset="./dist/images/fundo_rei_leao_celular.png"/>
+            <img src="./dist/images/fundo_rei_leao.png" alt="Rei leão">
+        </picture>
         <div class="image-text-section__text_container image-text-section--image-full-width__text_container">
             <h2 class="title--md">
                 Baixe e Assista onde quiser!
@@ -277,6 +296,6 @@
         </div>
     </section>
 
-    <script src="./src/scripts/main.js"></script>
+    <script src="./dist/js/main.js"></script>
 </body>
 </html>

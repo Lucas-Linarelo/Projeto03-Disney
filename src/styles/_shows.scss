@@ -16,6 +16,10 @@
             }
         }
 
+        @media(max-width: 768px){
+            grid-template-columns: 1fr 1fr;
+        }
+
         &--is-active{
             display: grid;
         }
@@ -33,6 +37,12 @@
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
+
+            @media(max-width: 768px){
+                font-size: 16px;
+                white-space: nowrap;
+                margin: 0 16px;
+            }
 
             &--is-active{
                 border-color: variaveis.$cor2;
